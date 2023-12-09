@@ -29,6 +29,7 @@ app.get('/get-user', async(req, res)=>{
 app.get('', (req, res)=>{
   res.json({
     success: true,
+    test: '------------------', 
     data : database
   })
 })
