@@ -1,9 +1,27 @@
 const express = require('express');
+const mongoose = require('mongoose')
+const User = require('./models/user')
+require('dotenv').config()
+
+
 
 
 const app = express()
 
 const PORT = 4000;
+
+mongoose.connect(process.env.DB)
+    .then(console.log('Database connected successfully'))
+    .catch(err => console.log(err))
+
+app.get('/get-user', async(req, res)=>{
+    const users = await User.findOne()
+    res.json({
+        success: true,
+        data: users
+    })
+
+})
 
 app.get('/get-data', async(req, res)=>{
     res.json({
