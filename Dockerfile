@@ -2,5 +2,5 @@ FROM node:16.10.0-alpine
 WORKDIR app
 COPY . .
 RUN npm install
-EXPOSE 1408
+EXPOSE 4000
 CMD ["npm", "start"]
