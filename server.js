@@ -10,6 +10,9 @@ const app = express()
 
 const PORT = 4000;
 
+database = process.env.DB
+console.log('------------------>',database)
+
 mongoose.connect(process.env.DB)
     .then(console.log('Database connected successfully'))
     .catch(err => console.log(err))
@@ -21,6 +24,13 @@ app.get('/get-user', async(req, res)=>{
         data: users
     })
 
+})
+
+app.get('', (req, res)=>{
+  res.json({
+    success: true,
+    data : database
+  })
 })
 
 app.get('/get-data', async(req, res)=>{
