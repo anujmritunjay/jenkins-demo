@@ -79,7 +79,7 @@ app.get('/get-data', async(req, res)=>{
               "gender": "Male"
           },
           {
-            "name": "Sharin Shushil",
+            "name": "Sharin Shushil Manthan IT Solutions",
             "age": 26,
             "gender": "Male"
         }
