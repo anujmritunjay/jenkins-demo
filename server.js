@@ -77,7 +77,12 @@ app.get('/get-data', async(req, res)=>{
               "name": "Maulik Patel",
               "age": 30,
               "gender": "Male"
-          }
+          },
+          {
+            "name": "Sharin Shushil",
+            "age": 26,
+            "gender": "Male"
+        }
           ]
         
     })
